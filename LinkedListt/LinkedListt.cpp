@@ -84,20 +84,36 @@ void LinkedListt::PrintList()
      temp2->next = temp;
 };
 
-void LinkedListt::InsertAtPosition(int position){
-    int item;
-     if(head==position)
-    {
-        head = new Node();
-        head->data=item;
-        head->next=head;
-    }
-    else
-    {
-        Node* temp=new Node();
-        temp->data=item;
-        temp->next=head;
-        head=temp;
-        
-    }
-}
+void LinkedListt::InsertAtPosition(int item ,int position){
+  
+    Node *temp=head;
+    int count=0;
+    cout<<"Executed"<<endl;
+        while(temp->next!=NULL)
+        {
+            
+            temp=temp->next;
+            count++;
+            cout<<"Executed in LOOP"<<endl;
+            
+        if(position==count)
+         {
+            Node *temp2=new Node();
+            
+            temp2->data=item;
+            temp->next=temp2;
+            temp2=temp->next;
+           // head=temp;
+            
+            
+            
+            //temp=head;
+            cout<<"Position executed"<<endl;
+            
+        }
+        else
+            cout<<"Can't be executed"<<endl;
+    
+        }
+    
+};

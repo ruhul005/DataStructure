@@ -25,10 +25,10 @@ int main() {
     l.InsertAtFront(2);
     l.InsertAtFront(1);
     l.InsertAtFront(6);
-   l.InsertAtBack(7);
-   l.InsertAtFront(1);
-   l.InsertAtBack(10);
-   l.InsertAtPosition(2);
+  // l.InsertAtBack(7);
+  // l.InsertAtFront(1);
+  // l.InsertAtBack(10);
+   l.InsertAtPosition(9,2);
     l.PrintList();
     
     
