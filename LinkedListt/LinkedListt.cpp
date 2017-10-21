@@ -98,7 +98,7 @@ void LinkedListt::InsertAtPosition(int item ,int position){
     Node*temp2=head;
     
     int i=0;
-    while(position<2)
+    while(i<position-2)
     {
         temp1=temp2->next;
         
@@ -127,7 +127,7 @@ bool LinkedListt::Search(int Key)
   
 };
 
-void LinkedListt::DeleteFromFront(int){
+void LinkedListt::DeleteFromFront(){
     if(head==NULL)
         cout<<"nothing to delete"<<endl;
     else{
@@ -135,4 +135,29 @@ void LinkedListt::DeleteFromFront(int){
         delete head;
         head=temp;
     }
+};
+void LinkedListt::DeleteFromBack(){
+    if(head==NULL)
+        cout<<"Nothing to delete"<<endl;
+    
+    Node *temp=head;
+    Node *temp2=head;
+    int n=0;
+    while(temp->next!=NULL){
+        temp=temp->next;
+        
+        n++;
+       // cout<<"While loop"<<endl;
+        if(n>1)
+        {
+            temp2=temp2->next;
+            //cout<<"in if"<<endl;
+        }
+    }
+    if(temp->next==NULL){
+        delete temp;
+        temp2->next=NULL;
+       // cout<<"deleted"<<endl;
+    }
+    
 }

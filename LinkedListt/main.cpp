@@ -39,5 +39,9 @@ int main() {
     else
         cout<<"Not Found"<<endl;
     
+    l.DeleteFromFront();
+    l.DeleteFromBack();
+    l.PrintList();
+    
 }
 

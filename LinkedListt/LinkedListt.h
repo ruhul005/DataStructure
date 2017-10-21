@@ -7,6 +7,7 @@ public:
     void InsertAtBack(int);
     void InsertAtPosition(int, int);
     bool Search(int);
-    void DeleteFromFront(int);
+    void DeleteFromFront();
+    void DeleteFromBack();
     
 };
