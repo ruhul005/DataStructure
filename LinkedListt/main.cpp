@@ -30,7 +30,14 @@ int main() {
   // l.InsertAtBack(10);
    l.InsertAtPosition(9,2);
     l.PrintList();
+    l.Search(1);
     
+    
+    if(l.Search(0))
+        cout<<"found"<<endl;
+                
+    else
+        cout<<"Not Found"<<endl;
     
 }
 

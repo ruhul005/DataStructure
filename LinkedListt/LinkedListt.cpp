@@ -86,34 +86,53 @@ void LinkedListt::PrintList()
 
 void LinkedListt::InsertAtPosition(int item ,int position){
   
-    Node *temp=head;
-    int count=0;
-    cout<<"Executed"<<endl;
-        while(temp->next!=NULL)
-        {
-            
-            temp=temp->next;
-            count++;
-            cout<<"Executed in LOOP"<<endl;
-            
-        if(position==count)
-         {
-            Node *temp2=new Node();
-            
-            temp2->data=item;
-            temp->next=temp2;
-            temp2=temp->next;
-           // head=temp;
-            
-            
-            
-            //temp=head;
-            cout<<"Position executed"<<endl;
-            
-        }
-        else
-            cout<<"Can't be executed"<<endl;
+    Node *temp1=new Node();
+    temp1->data=item;
+    temp1->next=NULL;
     
-        }
+    if(position==1)
+    {
+        temp1->next=head;
+        head=temp1;
+    }
+    Node*temp2=head;
+    
+    int i=0;
+    while(position<2)
+    {
+        temp1=temp2->next;
+        
+    }
+    temp1->next=temp2->next;
+    temp2->next=temp1;
     
 };
+
+bool LinkedListt::Search(int Key)
+{
+  bool flag=false;
+  Node *temp=head;
+  while(temp->next!=NULL)
+  {
+      if(temp->data==Key)
+      {
+          flag=true;
+      }
+      temp=temp->next;
+  }
+  if(temp->data==Key)
+      flag=true;
+  return flag;
+  
+  
+};
+
+void LinkedListt::DeleteFromFront(int){
+    if(head==NULL)
+        cout<<"nothing to delete"<<endl;
+    else{
+        Node *temp=head->next;
+        delete head;
+        head=temp;
+    }
+}
