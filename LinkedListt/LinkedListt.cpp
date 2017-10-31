@@ -160,4 +160,40 @@ void LinkedListt::DeleteFromBack(){
        // cout<<"deleted"<<endl;
     }
     
+};
+void LinkedListt::DeleteFromPosition(int position){
+    Node*previous=head;
+    Node *after=head;
+    if(head==NULL)
+        cout<<"NOthing to delete"<<endl;
+    else{
+        int n=0,k=0;
+        cout<<"in else"<<endl;
+        
+        while(after->next!=NULL)
+            
+        {   
+            cout<<"while loop"<<endl;
+            if(k>0)
+                head=head->next;
+            
+            
+            
+            
+            if(n>1)
+                previous=previous->next;
+            k++;
+            n++;
+            
+            if(n-1==position)
+            {   cout<<"in 2 if"<<endl;
+                previous->next=after;    
+                delete head;
+                cout<<"deleted"<<endl;
+                
+                
+               // break;
+            }
+        }
+    }
 }

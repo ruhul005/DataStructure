@@ -9,5 +9,6 @@ public:
     bool Search(int);
     void DeleteFromFront();
     void DeleteFromBack();
+    void DeleteFromPosition(int);
     
 };
