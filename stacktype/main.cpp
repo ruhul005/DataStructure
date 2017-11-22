@@ -20,14 +20,20 @@ using namespace std;
 /*
  * 
  */
-/*
-int sumOdd(StackType <int>s){
-    int sum=0;
-    if(s%2==0)
-        sum=sum+s;
+
+int sumOdd(StackType <int>stackFunction){
+    int x=0,sum=0;
+    while(!stackFunction.IsEmpty()){
+        x=stackFunction.Top();
+        if(x%2!=0){
+            sum=sum+x;
+        }
+        stackFunction.Pop();
+        
+    }
     return sum;
 }
-*/
+
 int main() {
 
     StackType<int> stack;
@@ -89,9 +95,21 @@ int main() {
      
      cout<<tempStack.Top()<<endl;
      
-     x=0;
+     /*x=0;
      
-     //x=sumOdd(tempStack);
+     cout<<"Sum of all ODD"<<endl;
+     x=sumOdd(tempStack);
+     cout<<x<<endl;
+     
+     */
+     x=0;
+      while(!tempStack.IsEmpty()){
+        x=tempStack.Top();
+       // tempStack.Push(x);
+        tempStack.Pop();
+        cout<<x<<endl;
+          
+    }
     
 }
 
