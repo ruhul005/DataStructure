@@ -4,7 +4,7 @@
  * Name:Md Ruhul Amin
  * ID:1512487042
  * Section:01
- *
+ *learn the algorithm from this link: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
  * Created on November 27, 2017, 8:48 PM
  */
 
