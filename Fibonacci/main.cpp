@@ -21,6 +21,8 @@ using namespace std;
 int fib(int n);
 int factorial(int n);
 int sumOfDigits(int n);
+int findMinimum(int num[], int size);
+int decimalToBinary(int decimal);
 
 int main() {
     
@@ -35,6 +37,14 @@ int main() {
     int sumDigit=sumOfDigits(123);
     cout<<"Sum of digits:";
     cout<<sumDigit<<endl;
+    int size=8;
+    int number[]={45,67,23,67,4,90,47,-4};
+    int min=findMinimum(number,size);
+    cout<<min<<endl;
+    
+    
+    int decToBin=decimalToBinary(5);
+    //cout<<decToBin<<endl;
 }
 
 int fib(int n){
@@ -62,4 +72,24 @@ int sumOfDigits(int n){
     
     
     
+}
+
+int findMinimum(int num[], int size){
+    if(size==1)
+        return num[0];
+    else{
+        if(num[size]<findMinimum(num,size-1))
+            return num[size];
+        else
+            return findMinimum(num,size-1);
+    }
+}
+
+int decimalToBinary(int decimal){
+    if(decimal>0){
+        decimalToBinary(decimal/2);
+        cout<<decimal%2;
+        return 0;
+        
+    }
 }

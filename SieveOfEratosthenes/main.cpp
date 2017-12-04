@@ -38,7 +38,7 @@ int main() {
     int k=0;
     for(int i=2;i<=limit;i++){
         if(isPrime[i]){      //checking if the value is true. If true then prime
-            cout<<number[i]<<" ";//printing primes
+            cout<<number[i]<<endl;//printing primes
             for(int j=2;j<=limit/2,k<limit;j++){
                 
                 k=j*i;
@@ -46,6 +46,7 @@ int main() {
                     continue;
                 
                 isPrime[k]=false;  //updating list as false which are not prime
+                
             }
             k=2;
         }
